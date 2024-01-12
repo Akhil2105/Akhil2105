@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <header>
+        My Login Page
+    </header>
+    <body>
+        <form action="/submit" method="post"></form>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <button type="button" onclick="togglePassword()">Show</button>
+        <button onclick="Submit()">Submit</button>
+<!-- 
+JAVASC -->
+    
+        <script>
+            function togglePassword(){
+                var passwordIput = document.getElementById("password");
+                if(passwordIput.type === 'password'){
+                    passwordIput.type = 'text'
+                    document.querySelector('button').textContent='Hide';
+                }
+                else{
+                    passwordIput.type='password'
+                    document.querySelector('button').textContent="Show";
+                }
+            }
+            function Submit(){
+                var password = document.getElementById('password').value;
+                var email = document.getElementById('email').value;
+                if(email == "abc@gmail.com" || password == "Asdfg"){
+                    alert("Login success")
+                }
+                else{
+                    alert("Invalid details. Please try again.")
+                }
+                }
+            
+        
+        </script>
+        
+    </body>
+</head>
+<body>
+    
+</body>
+</html>
